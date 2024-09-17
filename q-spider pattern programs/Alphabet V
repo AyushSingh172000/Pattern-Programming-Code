@@ -1,0 +1,34 @@
+public class AlphabetV {
+	
+public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter n:");
+		int n=sc.nextInt();
+		printpattern(n);
+		
+
+	}
+	
+	public static void printpattern(int n) {
+		
+		int mid=n/2+1;
+		int sst=1;
+		int est=(2*n)-1;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=est;j++)
+			{
+				if(j==sst || j==est)
+					System.out.print("* ");
+				else
+					System.out.print("  ");
+			}
+			sst++;
+			est--;
+			System.out.println();
+		}
+
+	}
+
+}
